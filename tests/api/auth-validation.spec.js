@@ -86,10 +86,10 @@ test.describe('API: /api/auth/otp/request/ - Валидация', () => {
 
     const body = await response.json();
     
-    // ОЖИДАЕМЫЙ РЕЗУЛЬТАТ ИЗ ТЕСТ-КЕЙСА: 400
+    // ОЖИДАЕМЫЙ РЕЗУЛЬТАТ ИЗ ТЕСТ-КЕЙСА: 400 !
     expect(response.status()).toBe(400);
     
-    // БЕРЕМ ИЗ ТЕСТ-КЕЙСА и SWAGGER: код ошибки MISSING_TOKEN
+    // БЕРЕМ ИЗ ТЕСТ-КЕЙСА и SWAGGER: кодд ошибки MISSING_TOKEN
     expect(body.error).toBe('BAD_REQUEST');
     expect(body.code).toBe('MISSING_TOKEN'); 
   });
