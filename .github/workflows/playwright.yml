@@ -20,6 +20,8 @@ jobs:
     - name: Install Playwright Browsers # 4. Устанавливаем браузеры для Playwright
       run: npx playwright install --with-deps
     - name: Run Playwright tests # 5. Запускаем тесты!
+      env:
+        PLATFORM_TOKEN: ${{ secrets.PLATFORM_TOKEN }}
       run: npx playwright test
     - name: Upload report # 6. Сохраняем HTML-отчёт (об этом ниже)
       uses: actions/upload-artifact@v4
